@@ -815,3 +815,6 @@ Arrays.asList(): 返回的并不是 java.util.ArrayList ，而是 java.util.Arra
 2. 深拷贝：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，此为深拷贝。
 
 > 深拷贝的另一种方式，使用序列化和反序列化，获取一个新对象。
+
+### Java Class类与Object类
+https://segmentfault.com/a/1190000018780920
