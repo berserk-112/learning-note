@@ -207,6 +207,11 @@ public class Plugin implements InvocationHandler {
 - Dao 接口的工作原理是 JDK 动态代理，MyBatis 运行时会使用 JDK 动态代理为 Dao 接口生成代理 proxy 对象，代理对象 proxy 会拦截接口方法，转而执行MappedStatement所代表的 sql，然后将 sql 执行结果返回。
 
 ## <a name="6">MyBatis的分页</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+    
+    - 原生SQL的Limit分页
+- Mybatis自带的RowBounds分页
+- 自定义拦截器插件进行分页
+- 使用PageHelper插件分页
 MyBatis的分页有两种，一种是使用 RowBounds 对象进行分页，另一种是使用PageHelper进行分页
   - 使用 RowBounds 对象分页，它是针对 ResultSet 结果集执行的内存分页，而非物理分页，对于数据量大的情况，使用这种分页方式会浪费内存
   - 使用PageHelper 进行分页，它是在StatementHandler之前进行拦截，对MappedStatement进行分页sql的拼接操作，PageHelper只对紧跟着的第一个SQL语句起作用.
